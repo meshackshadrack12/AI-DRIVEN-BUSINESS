@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Smart Ranch</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="nav-brand">
+          <span>Smart Ranch</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-item active">
+          <span>📊</span> Overview
+        </div>
+        <div class="nav-item">
+          <span>🐄</span> Herd Management
+        </div>
+        <div class="nav-item">
+          <span>🗺️</span> Geofencing
+        </div>
+        <div class="nav-item">
+          <span>⚙️</span> Settings
+        </div>
+      </nav>
+      <div style="padding: 1.5rem;">
+        <button id="logoutBtn" class="btn btn-outline" style="width: 100%;">Log Out</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="topbar">
+        <h2>Live Monitoring</h2>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="text-align: right;">
+            <div style="font-weight: 600; font-size: 0.875rem;">John Loipaidika</div>
+            <div style="color: var(--text-secondary); font-size: 0.75rem;">Admin</div>
+          </div>
+          <div style="width: 40px; height: 40px; background-color: var(--primary-blue); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+            JD
+          </div>
+        </div>
+      </header>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon bg-blue">🐄</div>
+          <div class="stat-info">
+            <h4>Total Tracked</h4>
+            <p id="totalCount">0</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon bg-green">✓</div>
+          <div class="stat-info">
+            <h4>Healthy Status</h4>
+            <p id="healthyCount">0</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon bg-red">⚠️</div>
+          <div class="stat-info">
+            <h4>Critical Alerts</h4>
+            <p id="alertCount">0</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Body -->
+      <div class="dashboard-body">
+        <!-- Map -->
+        <div class="map-container">
+          <div class="map-header">Farm Map (Laikipia Region)</div>
+          <div id="map"></div>
+        </div>
+
+        <!-- Livestock List -->
+        <div class="livestock-list">
+          <div class="list-header">
+            <span>Herd Roster</span>
+            <span style="color: var(--primary-blue); cursor: pointer; font-size: 0.875rem;">View All</span>
+          </div>
+          <div class="list-body" id="livestockListContainer">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <!-- App JS -->
+  <script src="js/data.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

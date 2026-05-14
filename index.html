@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Ranch | AI Livestock Monitoring</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <!-- We will just use text for the logo to avoid missing image issues if they didn't save the generated logo to assets, but we can structure it so they can easily swap it in -->
+      <span>Smart Ranch</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section & Login -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="hero-title">Future of <span>Livestock</span> Monitoring</h1>
+      <p class="hero-subtitle">Empowering farmers with AI-driven insights, real-time GPS tracking, and predictive health analytics.</p>
+      <a href="#services" class="btn btn-outline">Explore Plans</a>
+    </div>
+    <div class="auth-container">
+      <div class="auth-card">
+        <h3>Portal Login</h3>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="farmer@smartranch.com" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Access Dashboard</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Tiers -->
+  <section id="services" style="background-color: white;">
+    <h2 class="section-title">Service Tiers</h2>
+    <div class="services-grid">
+      <!-- Tier 1 -->
+      <div class="service-card tier-1">
+        <div class="service-icon">📡</div>
+        <h3>Basic Tracking</h3>
+        <p class="service-price">$49<span style="font-size: 1rem; color: var(--text-secondary);">/mo</span></p>
+        <ul class="service-features">
+          <li>Real-time GPS Tracking</li>
+          <li>Daily Location History</li>
+          <li>Basic Geofencing Alerts</li>
+          <li>Up to 50 Animals</li>
+        </ul>
+        <button class="btn btn-outline" style="width: 100%;">Get Started</button>
+      </div>
+      <!-- Tier 2 -->
+      <div class="service-card tier-2">
+        <div class="service-icon">🧠</div>
+        <h3>AI Health Monitoring</h3>
+        <p class="service-price">$149<span style="font-size: 1rem; color: var(--text-secondary);">/mo</span></p>
+        <ul class="service-features">
+          <li>Everything in Basic</li>
+          <li>Predictive Health Analytics</li>
+          <li>Abnormal Movement Alerts</li>
+          <li>Up to 200 Animals</li>
+        </ul>
+        <button class="btn btn-primary" style="width: 100%;">Most Popular</button>
+      </div>
+      <!-- Tier 3 -->
+      <div class="service-card tier-3">
+        <div class="service-icon">🏭</div>
+        <h3>Enterprise Fleet</h3>
+        <p class="service-price">Custom</p>
+        <ul class="service-features">
+          <li>Unlimited Animals</li>
+          <li>API Access & Integrations</li>
+          <li>Dedicated Account Manager</li>
+          <li>Custom AI Model Training</li>
+        </ul>
+        <button class="btn btn-outline" style="width: 100%;">Contact Sales</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
